@@ -1,0 +1,123 @@
+/* Colores */
+:root {
+    --white: #ffffff;
+    --dark: #302b2b;
+    --primary: #ebec8d;
+    --secundarylight: rgb(161, 40, 87);
+
+}
+
+html {
+    font-family: Arial, Helvetica, san-serif;;
+    font-size:  62,5%;
+    height: 100vh;
+
+
+}
+
+*{
+   box-sizing: border-box; 
+}
+
+
+/* Degradado de fondo */
+body {
+
+    background-image: linear-gradient(to top, var(--secundaryLight),0%,var(--white));
+}
+h1{
+    font-size: 5rem;
+}
+h1 span{
+    font-size: 1rem;
+}
+h2{
+    font-size: 3rem;
+}
+p{
+    font-size: 1.5rem;
+}
+/**********************************/
+h1{
+    text-align: center;
+    margin: 0.5rem;/* margen al rededor de la mitad de lo que ocupa la letra */
+    color: var(--dark);/* color de la letra dark es un valor  */
+    font-weight: bolder;/*grosor de la letra*/
+
+}
+.navegacion{
+background-color: var(--primary);
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+/*media query:modificar las reglas segun el tamaño de pantalla
+se aplica las reglas que haya dentro del @media cuando el ancho de la pantalla sea mayor a 480px */
+@media(min-width: 520px){
+    .navegacion{
+        flex-direction: row;
+        justify-content: space-around;
+
+    }
+}
+.navegacion a {
+    font-size: 2rem;
+    border:1px solid green;
+    color: var(--secundarylight);
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+.navegacion a:hover{
+    color:var(--dark);
+    background-color: var(--white);
+}
+
+.banner{
+    background-image: url("../img/desarrollador.jpg");
+    background-repeat:no-repeat ;
+    background-size: cover;
+    height: 450px;
+}
+
+.section-banner{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(250,0,0,0.5);
+    /*alinear hijos*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+    .section-banner img{
+        width:3rem;
+    }
+
+    .section-banner p,h2{
+        color: var(--white);
+    }
+
+.boton{
+    background-color: var(--dark);
+    color: var(--white);
+    padding:1rem 3rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px solid red;
+    width:90%;
+    text-align: center;
+}
+
+@media(min-width: 550px){
+    .boton{
+        width: auto;
+    }
+}
+
+.center-vertical{
+    display: flex;
+    gap: 1rem;
+}
